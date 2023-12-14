@@ -18,7 +18,7 @@ function SearchHistory({
   const searchHistoryMarkup = history.length > 0 && (
     <ul className="ps-0">
       {/* @ts-ignore */}
-      {history.toReversed().map(({ city, country, time }, i) => {
+      {history.map(({ city, country, time }, i) => {
         const order = i + 1;
         const timeLabel = new Date(time).toLocaleTimeString();
         return (

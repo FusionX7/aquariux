@@ -78,8 +78,8 @@ function App() {
       const countryLabel = data.sys.country;
       const unixTime = (new Date()).getTime();
       setHistory(prev => [
-        ...prev,
         { city: cityLabel, country: countryLabel, time: unixTime },
+        ...prev,
       ]);
     }
   }, [data]);
