@@ -76,7 +76,7 @@ function App() {
     if (data) {
       const cityLabel = data.name;
       const countryLabel = data.sys.country;
-      const unixTime = data.dt;
+      const unixTime = (new Date()).getTime();
       setHistory(prev => [
         ...prev,
         { city: cityLabel, country: countryLabel, time: unixTime },

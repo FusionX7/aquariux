@@ -17,9 +17,10 @@ function SearchHistory({
 
   const searchHistoryMarkup = history.length > 0 && (
     <ul className="ps-0">
-      {history.map(({ city, country, time }, i) => {
+      {/* @ts-ignore */}
+      {history.toReversed().map(({ city, country, time }, i) => {
         const order = i + 1;
-        const timeLabel = new Date(time * 1000).toLocaleTimeString();
+        const timeLabel = new Date(time).toLocaleTimeString();
         return (
           <li key={time.toString()} className="d-flex justify-content-between mt-2 border-bottom">
             <div>

@@ -15,7 +15,7 @@ function WeatherDetail({ weatherData }: WeatherDetailProps) {
   const weatherDescriptionLabel = weatherInfoObj.description;
 
   return (
-    <div className="d-flex flex-column mt-4">
+    <div className="d-flex flex-column mt-4 ms-4">
       <small className="font-monospace text-body-secondary">
         {cityLabel}, {countryLabel}
       </small>
